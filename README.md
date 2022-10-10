@@ -19,6 +19,13 @@ designed to serve terrain tilesets.  In particular the Docker
 [geodata/cesium-terrain-server](https://registry.hub.docker.com/u/geodata/cesium-terrain-server/)
 image is designed to simplify the visualisation of terrain tilesets.
 
+## Compile
+
+`cmake -B build -S . -G "Visual Studio 16 2019" -DCMAKE_TOOLCHAIN_FILE=E:\vcpkg\scripts\buildsystems\vcpkg.cmake  -DCMAKE_INSTALL_PREFIX=E:\code\cesium-terrain-builder\output`
+
+`cmake --build build --config Release --target install`
+`cmake --build build --config Debug --target install`
+
 ## Command Line Tools
 
 The following tools are built on top of the C++ `libctb` library:

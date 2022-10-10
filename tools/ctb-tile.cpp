@@ -410,7 +410,9 @@ buildTerrain(const TerrainTiler &tiler, TerrainBuild *command) {
       TerrainTile *tile = *iter;
       const string temp_filename = concat(filename, ".tmp");
 
-      tile->writeFile(temp_filename.c_str());
+      //tile->writeFile(temp_filename.c_str());
+      FILE*f=fopen(temp_filename.c_str(), "wb");
+      tile->writeFile(f);
       delete tile;
 
       if (VSIRename(temp_filename.c_str(), filename.c_str()) != 0) {
