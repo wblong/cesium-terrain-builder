@@ -23,7 +23,8 @@ add_library(ctb SHARED
   TerrainTiler.cpp
   TerrainTile.cpp
   GlobalMercator.cpp
-  GlobalGeodetic.cpp)
+  GlobalGeodetic.cpp
+  gdaloverviewdataset.cpp)
 target_link_libraries(ctb ${GDAL_LIBRARIES} ${ZLIB_LIBRARIES})
 
 # Install libctb
